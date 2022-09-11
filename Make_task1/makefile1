@@ -1,0 +1,12 @@
+CC = gcc
+OBJ = src.o
+DEP = inc.h
+
+gnu_make_bin: $(OBJ) $(DEP)
+	$(CC) -o gnu_make_bin src.o inc.h
+
+src.o: src.c
+	$(CC) -c src.c	
+
+clean:
+	rm -rf $(OBJ) gnu_make_bin
